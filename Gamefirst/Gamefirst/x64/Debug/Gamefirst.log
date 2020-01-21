@@ -1,1 +1,5 @@
-﻿  Gamefirst.vcxproj -> E:\Gamefirst\x64\Debug\Gamefirst.exe
+﻿  Gamefirst.cpp
+C:\Users\traek_elv99xq\Desktop\Pronichev\Gamefirst\Gamefirst\Gamefirst.cpp(138,20): warning C4805:  ==: небезопасное смешение типа "int" и типа "bool" в операции
+C:\Users\traek_elv99xq\Desktop\Pronichev\Gamefirst\Gamefirst\Gamefirst.cpp(174,31): warning C4267:  =: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\traek_elv99xq\Desktop\Pronichev\Gamefirst\Gamefirst\Gamefirst.cpp(175,38): warning C4267:  =: преобразование из "size_t" в "int"; возможна потеря данных
+  Gamefirst.vcxproj -> C:\Users\traek_elv99xq\Desktop\Pronichev\Gamefirst\x64\Debug\Gamefirst.exe

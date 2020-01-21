@@ -4,6 +4,7 @@
 #include <vector>
 #include <fstream>
 #include "Windows.h"
+#include <conio.h>
 using namespace std;
 
 enum Race { Human = 0, Elf, Draft, Dark_elf, Nord, Katget };
@@ -19,7 +20,7 @@ string mapName{ "Start-loc.txt" };
 
 struct Character //персонаж
 {
-	char skin{ '☺' };
+	char skin{ '0' };
 	string name{ "Tester" };
 	Race chRace{ Human };
 	Class chClass{ Assasin };
@@ -134,7 +135,24 @@ void Setup()
 
 void Input()
 {
+	if (_kbhit()==true)
+	{
+		switch (_getch())
+		{
+		case 'a':character.chMove = Left;
+			break;
+		case 'd':character.chMove = Right;
+			break;
+		case 's':character.chMove = Down;
+			break;
+		case 'w':character.chMove = Up;
+			break;
 
+
+	
+
+		}
+	}
 }
 void Logic()
 {
@@ -163,15 +181,14 @@ void drawMap(string mapName)
 	}
 	for (int i = 0; i < maphight; ++i)
 	{
-		for (int j = 0; i < mapwidth; ++i)
-		{
-			
+		for (int j = 0; j < mapwidth; ++j)
+		{	
 			if ((i == character.x) && (j == character.y))
 			{
 				currentMap[i][j] = character.skin;
 			}
 		}
-			cout << currentMap[i] << '\n';
+		cout << currentMap[i] << '\n';
 	}
 }
 
